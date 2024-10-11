@@ -1,0 +1,16 @@
+
+nc: 1
+
+names:
+ ['knives']
+roboflow:
+  license: CC BY 4.0
+  project: knives-zcsqv
+  url: https://universe.roboflow.com/sona-thc0d/knives-zcsqv/dataset/5
+  version: 5
+  workspace: sona-thc0d
+
+path : C:/Users/koylu/Desktop/Projeknives/Knives-5
+train : ./train/images
+val : ./valid/images
+test: ./test/images

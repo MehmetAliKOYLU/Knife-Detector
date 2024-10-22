@@ -1,0 +1,11 @@
+
+nc: 1
+
+
+names:
+ ['knives']
+
+path : C:/Users/koylu/Desktop/Proje/Veriler/Veriler_son
+train : ./train/images
+val : ./valid/images
+test: ./test/images

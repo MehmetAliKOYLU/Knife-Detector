@@ -1,43 +1,48 @@
-# Knife-Detector
+# Knife Detector
 
-Knife-Detector, YOLOv8 kullanarak görüntülerde bıçakları tespit etmek amacıyla geliştirilmiş bir nesne algılama modelidir. Bu proje, bıçak tespitini hızlı ve etkili bir şekilde gerçekleştirmek için derin öğrenme tekniklerinden yararlanır ve güvenlik sistemleri gibi çeşitli uygulamalarda kullanılabilir.
+This project is designed to detect and log knives from camera feeds, videos, and images. It was developed to instantly detect knife threats and store the detection in a database for future reference, especially in cases where knives are used in criminal activities.
 
-## Proje Hakkında
+## Project Overview
 
-Bu proje, güvenlik amacıyla video ve görüntülerde bıçak tespiti yapmak için YOLOv8 nesne tespiti algoritmasını kullanır. Eğitim, çeşitli veri artırma teknikleri ile geliştirilmiş bir veri seti üzerinde gerçekleştirilmiştir. Model, hem eğitim hem de doğrulama sırasında yüksek doğruluk ve performans elde etmeye çalışır.
+The Knife Detector project performs the following key tasks:
 
-### Kullanılan Teknolojiler
+1. **Knife Detection**: The system can detect knives in real-time using video feeds, static images, or recorded videos. Once a knife is detected, the system highlights it and logs the detection, including the time and location, into a database.
+2. **Custom Dataset Creation**: A custom knife detection dataset was created using various sources. These images were labeled in YOLO format and integrated into the dataset. The dataset was prepared and formatted using Roboflow for easy YOLO model integration.
+3. **Model Training**: After assembling the dataset, the model was trained using different algorithms and learning rate values. The best-performing model was selected based on accuracy and performance.
+4. **User Interface (GUI)**: The GUI for the project was built using Tkinter, allowing users to interact with the detection system, upload new images or videos for analysis, and view the results of knife detection in real time.
+5. **Database Integration**: Detected knife instances, along with the detection time and confidence score, are stored in an SQLite3 database for future retrieval.
 
-- **Python**: Programlama dili
-- **YOLOv8**: Nesne algılama modeli
-- **Ultralytics**: YOLOv8 çerçevesi
-- **OpenCV**: Görüntü işleme
-- **Pandas**: Veri analizi
-- **Matplotlib**: Grafik ve görselleştirme
+## Key Features
 
-## Özellikler
+- **Real-Time Detection**: Detects knives from live camera feeds.
+- **Image & Video Processing**: Processes images and videos to identify knives.
+- **Database Logging**: Logs detection time and other relevant details into a database.
+- **Adjustable Threshold**: Detection sensitivity threshold can be adjusted based on the use case.
 
-- Bıçak tespiti için optimize edilmiş YOLOv8 modeli
-- Video ve görüntü işleme desteği
-- Gerçek zamanlı algılama (RTSP/Canlı video akışı desteği)
-- Gelişmiş veri artırma teknikleri
-- Model eğitimi ve değerlendirme için hazır betikler
+## Setup
 
-## Kurulum
+To get started with the project, follow these steps:
 
-Bu projeyi çalıştırmak için aşağıdaki adımları takip edin:
-
-### Gereksinimler
-
-- Python 3.8 veya daha üst sürüm
-- YOLOv8 kurulumu (Ultralytics)
-- OpenCV
-- Diğer bağımlılıklar (requirements.txt dosyasında belirtilmiştir)
-
-### Adımlar
-
-1. **Projenin Klonlanması**
-
+1. Clone the repository from GitHub:
    ```bash
    git clone https://github.com/MehmetAliKOYLU/Knife-Detector.git
-   cd Knife-Detector
+
+2. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+
+3. Prepare your dataset in YOLO format or use the provided dataset in the project.
+
+4. Run the project:
+   ```bash
+   python main.py
+
+
+## Additional Information
+
+- [YOLO](https://docs.ultralytics.com)
+- [Tkínter](https://docs.python.org/3/library/tkinter.html)
+
+
+
+

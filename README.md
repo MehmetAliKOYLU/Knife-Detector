@@ -27,13 +27,9 @@ To get started with the project, follow these steps:
    ```bash
    git clone https://github.com/MehmetAliKOYLU/Knife-Detector.git
 
-2. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
+2. Prepare your dataset in YOLO format or use the provided dataset in the project.
 
-3. Prepare your dataset in YOLO format or use the provided dataset in the project.
-
-4. Run the project:
+3. Run the project:
    ```bash
    python main.py
 
